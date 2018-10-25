@@ -49,12 +49,9 @@
 </template>
 1
 <script>
-
 export default {
-
   name: "home",
-  components: {
-  }
+  components: {}
 };
 </script>
 <style lang="scss">
@@ -63,9 +60,9 @@ export default {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: rgba(115, 115,115,0.35);
-		background-repeat: no-repeat;
-		background-size: contain;
+    background: rgba(115, 115, 115, 0.35);
+    background-repeat: no-repeat;
+    background-size: contain;
     background-position: center;
     img.content {
       position: absolute;
@@ -79,10 +76,10 @@ export default {
   }
   h1 {
     margin-top: auto;
-    color:white;
+    color: white;
   }
   .arrow-dwn img {
-    margin-bottom: 35px; 
+    margin-bottom: 35px;
   }
   .red-head {
     background-color: #cb2b2c;
@@ -102,7 +99,7 @@ export default {
 .third {
   background-color: #f3f3f3;
   position: relative;
-  top:-5.4em;
+  top: -5.4em;
   display: flex;
   flex-direction: column;
 
@@ -142,12 +139,12 @@ export default {
     height: 2.4em;
     .white-space {
       background-color: white;
-      flex:1;
+      flex: 1;
       &:first-of-type {
-        transform: skewX(-35deg)  translateX(-25px);
+        transform: skewX(-35deg) translateX(-25px);
       }
       &:last-of-type {
-        transform: skewX(35deg) translateX(25px)
+        transform: skewX(35deg) translateX(25px);
       }
     }
     h2 {
@@ -176,7 +173,7 @@ export default {
         background-color: #f3f3f3;
         padding: 0 0 0 8px;
         font-size: 1rem;
-        flex:1;
+        flex: 1;
         border: 0;
         &::placeholder {
           color: #282828;
@@ -206,66 +203,5 @@ export default {
       }
     }
   }
-
-
 }
-
-
-.btn {
-	display: flex;
-	margin: auto;
-	padding: calc(0.08em + 1px) 0.8em 0.08em 0.8em;
-	transition: all 0.3s ease;
-	line-height: 1;
-	text-align: center;
-	font-weight: 100;
-  border-radius: 0;
-  text-decoration: none;
-  &:hover {
-    transition: all 0.3s ease;
-	  cursor: pointer;
-  }
-}
-
-
-.btn-black {
-	color: white;
-	background: #171616;
-  border: 2px solid #171616;
-  &:hover {
-    color: #171616;
-    background: white;
-  }
-}
-
-.btn-red {
-	color: #fdfdfd;
-  background: #d05152;
-  border: 2px solid #d05152;
-  &:hover {
-    color: black;
-    background: #fdfdfd;
-  }
-}
-.btn p {
-	margin: 2px auto;
-	text-align: center;
-	line-height: 1;
-}
-
-.btn-send {
-  color: #fdfdfd;
-  background: #f82425;
-  border: 2px solid #f82425;
-  width: calc(100% - 4px);
-  padding: 15px 0;
-  span {
-    width: 100%;
-  }
-  &:hover {
-    color: black;
-    background: #fdfdfd;
-  }
-}
-
 </style>
