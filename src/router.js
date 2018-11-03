@@ -7,8 +7,7 @@ Vue.use(Router);
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
-  routes: [
-    {
+  routes: [{
       path: "/",
       name: "home",
       component: Home
@@ -17,13 +16,25 @@ export default new Router({
       path: "/rules",
       name: "rules",
       component: () =>
-        import(/* webpackChunkName: "rules" */ "./views/Rules.vue")
+        import( /* webpackChunkName: "rules" */ "./views/Rules.vue")
     },
     {
       path: "/login",
       name: "login",
       component: () =>
-        import(/* webpackChunkName: "login" */ "./views/Login.vue")
+        import( /* webpackChunkName: "login" */ "./views/Login.vue")
+    },
+    {
+      path: "/registration",
+      name: "register",
+      component: () =>
+        import( /* webpackChunkName: "register" */ "./views/Register.vue")
+    },
+    {
+      path: "/profile",
+      name: "profile",
+      component: () =>
+        import( /* webpackChunkName: "profile" */ "./views/Profile.vue")
     }
   ]
 });

@@ -1,13 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav" v-show="false">
+    <div id="nav" v-show="this.$route.path=='/profile'?true:false">
       <router-link to='/'><img src="@/assets/img/logo_with_text.png"></router-link>
       <router-link to="/inventory">inventory</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view v-on:updateNav="toggleNav" />
   </div>
 </template>
+<script>
+export default {
+  data(){
+    return {
+      nav:true
+    }
+  },
+  beforeMount: function(){
+  },
+  methods: {
+    toggleNav:()=>{
+      this.nav?this.nav=false:this.nav=true;
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -16,6 +32,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
+  width: 100vw;
+  display: flex;
 
   .noSelect {
     -webkit-touch-callout: none;
@@ -91,16 +109,13 @@
 }
 
 #nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+  z-index: 15;
+  overflow-y: hidden;
+  width: 25%;
 }
 
 body {

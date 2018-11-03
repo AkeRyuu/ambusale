@@ -5,7 +5,7 @@
         <img src="@/assets/img/Type 1 Ambulance.png" class="content" alt="">
         <h1>Powerful phrase</h1>
         <a href="#" class="btn btn-black"><p>more</p></a>
-        <a href="#" class="arrow-dwn"><img src="@/assets/img/arrow_down.png" alt=""></a>
+        <a href="#" class="arrow-dwn"><div class="wrapper"><img src="@/assets/img/arrow_down.png" alt=""></div></a>
       </div>
       <div class="red-head">
         <h1>CHOOSE YOUR TYPE</h1>
@@ -77,6 +77,15 @@ export default {
   h1 {
     margin-top: auto;
     color: white;
+  }
+  .arrow-dwn {
+    .wrapper {
+          width: 4rem;
+    height: 2.5rem;
+      background-color: transparent;
+          margin-left: auto;
+    margin-right: auto;
+    }
   }
   .arrow-dwn img {
     margin-bottom: 35px;
