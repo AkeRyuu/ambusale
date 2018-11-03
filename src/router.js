@@ -35,6 +35,24 @@ export default new Router({
       name: "profile",
       component: () =>
         import( /* webpackChunkName: "profile" */ "./views/Profile.vue")
+    },
+    {
+      path: "/add_car",
+      name: "add_car",
+      component: () =>
+        import( /* webpackChunkName: "add_car" */ "./views/AddCar.vue")
+    },
+    {
+      path: "/car",
+      name: "car",
+      component: () =>
+        import( /* webpackChunkName: "car" */ "./views/Car.vue")
+    },
+    {
+      path: "/my_cars",
+      name: "my_cars",
+      component: () =>
+        import( /* webpackChunkName: "my_cars" */ "./views/MyCars.vue")
     }
   ]
 });
